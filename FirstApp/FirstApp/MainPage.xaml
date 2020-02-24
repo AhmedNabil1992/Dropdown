@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FirstApp.MainPage"
+             Title="Warehouse Management System">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Image Source="palet02.png" />
+        <Label x:Name="Header"
+               Text="Welcome"
+               FontSize="Large"
+               HorizontalOptions="Center" FontAttributes="Bold,Italic" />
+        
+        <Label x:Name="UsernameLBL"
+               Text="User Name :"
+               FontSize="Medium"
+               VerticalOptions="Start"
+               FontAttributes="Bold"/>
+
+        <Entry x:Name="Useridtxt"
+               Placeholder="User ID" 
+               FontSize="Medium" 
+               Keyboard="Numeric" />
+
+        <Label x:Name="PasswordLBL"
+               Text="Password :"
+               FontSize="Medium"
+               VerticalOptions="Start"
+               VerticalTextAlignment="End"
+               FontAttributes="Bold"/>
+
+        <Entry  x:Name="Passwordtxt"
+                FontSize="Medium" 
+                Placeholder="Password" 
+                IsSpellCheckEnabled="False" 
+                IsPassword="True" 
+                Keyboard="Default" />
+
+        <StackLayout Orientation="Horizontal">
+
+            <Button Text="Login"
+                HorizontalOptions="StartAndExpand"
+                Clicked="LoginAppAsync"
+                FontAttributes="Bold" FontSize="Large" BorderRadius="20" BorderColor="#009900" />
+
+            <Button Text="Exit"
+                HorizontalOptions="EndAndExpand"
+                Clicked="Exitapp" 
+                FontAttributes="Bold" FontSize="Large" BorderRadius="20"/>
+
+            <Button Text="Scan"
+                HorizontalOptions="EndAndExpand"
+                Clicked="ScanQRAsync" 
+                FontAttributes="Bold" FontSize="Large" BorderRadius="20"/>
+            
+        </StackLayout>
+
+        <Label x:Name="VersionLBL"
+               Text="Version :"
+               FontSize="Subtitle"
+               VerticalOptions="EndAndExpand"
+               VerticalTextAlignment="End"
+               FontAttributes="Bold"/>
+        
+    </StackLayout>
+
+</ContentPage>
